@@ -1,0 +1,24 @@
+option java_package = "org.elan.micro.common.proto.review";
+option java_outer_classname = "ReviewProtoBuff";
+
+message Review {
+
+optional int32 itemId = 1;
+optional int32 userId = 2;
+optional string reviewer_first_name = 3 ;
+optional string reviewer_last_name = 4;
+optional int64 review_date = 5;
+optional  string userFeedBack = 6;
+enum RatingEnum {
+
+ONE_STAR = 1;
+TWO_STAR = 2;
+THREE_STAR = 3;
+FOUR_STAR = 4;
+FIVE_STAR = 5;
+
+}
+
+optional RatingEnum rating = 7 [ default = ONE_STAR ];
+
+}
